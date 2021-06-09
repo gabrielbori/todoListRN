@@ -1,10 +1,21 @@
 import React from 'react';
-import {Text, TouchableOpacity} from 'react-native'
+import {Text, TouchableOpacity, View} from 'react-native'
 import styles from './styles'
-function TodoItem({value}){
-return (<TouchableOpacity style={styles.container}>
-<Text>{value.desc}</Text>
-</TouchableOpacity>)
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+
+function TodoItem({value}){      
+return (
+<View style={{flexDirection: 'row'}}>
+    <TouchableOpacity style={styles.container}>
+        <Text>{value.desc+" "+value.id}</Text>
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.checkContainer} onPress={}>
+        <Icon name="check" color="green" size={30}/>
+    </TouchableOpacity>
+   
+</View>
+)
 }
 
 export default TodoItem;

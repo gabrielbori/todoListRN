@@ -1,6 +1,6 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
+import Icon from 'react-native-vector-icons'
 //import screens
 import TodoDone from '../../screens/TodoDone';
 import TodoPending from '../../screens/TodoPending';
@@ -19,9 +19,9 @@ const tabBarOptions = {
 
 function RootNavigator() {
   return (
-    <Tab.Navigator initialRouteName="TodoDone" tabBarOptions={tabBarOptions}>
-      <Tab.Screen name="TodoDone" component={TodoDone} />
+    <Tab.Navigator initialRouteName="TodoPending" tabBarOptions={tabBarOptions}>
       <Tab.Screen name="TodoPending" component={TodoPending} />
+      <Tab.Screen name="TodoDone" component={TodoDone} />
     </Tab.Navigator>
   );
 }
