@@ -10,7 +10,7 @@ return (
     <TouchableOpacity style={styles.container}>
         <Text>{value.desc+" "+value.id}</Text>
     </TouchableOpacity>
-    <TouchableOpacity style={styles.checkContainer} onPress={}>
+    <TouchableOpacity style={styles.checkContainer}>
         <Icon name="check" color="green" size={30}/>
     </TouchableOpacity>
    
